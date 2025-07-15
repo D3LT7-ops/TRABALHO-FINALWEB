@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Aqui podemos implementar as funcionalidades como pop-ups de lembrete
-    // e a lógica para agendamento de aulas, redirecionamento para WhatsApp, etc.
+    // Alerta simples quando a página é carregada
     console.log('Página carregada!');
 
     // Exemplo de pop-up simples para lembrete de aula
