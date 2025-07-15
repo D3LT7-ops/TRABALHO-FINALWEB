@@ -11,6 +11,10 @@ header {
     background-color: #333;
     color: white;
     padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -28,11 +32,17 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Alterando a cor ao passar o mouse */
 }
 
 /* Títulos */
 h1, h2, h3 {
     text-align: center;
+    margin-top: 60px; /* Para dar espaço após o header fixo */
 }
 
 /* Estilo para os vídeos dos professores */
@@ -44,9 +54,16 @@ h1, h2, h3 {
 
 .video {
     width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para a seção de pacotes de aulas */
+video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Seção de Pacotes de Aulas */
 #pacotes {
     display: flex;
     justify-content: space-around;
@@ -60,6 +77,11 @@ h1, h2, h3 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 30%;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pacote:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
 }
 
 button {
@@ -70,19 +92,135 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #555;
 }
 
+/* Estilos para os formulários de login */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Seção de contato */
+#contato {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#contato a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contato a:hover {
+    color: #f39c12;
+}
+
 /* Footer fixo */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: #333;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Ajustes para o calendário de aulas */
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendario .dia {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendario .dia:hover {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Pop-up de lembrete de aula */
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.pop-up {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    animation: popup 0.5s ease-out;
+    z-index: 1000;
+}
+
+/* Estilos para as seções de conteúdo */
+section {
+    padding: 40px 20px;
+}
+
+#home, #pacotes, #sobre {
+    background-color: #fff;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#sobre h2, #sobre p {
+    margin-bottom: 20px;
+}
+
+/* Para garantir que o conteúdo fique dentro da tela */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
 }
