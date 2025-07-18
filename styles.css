@@ -172,6 +172,15 @@ form button:hover {
     background-color: #555;
 }
 
+/* Horarios de Funcionamento */
+.funcionamento{
+    text-align: center;
+}
+
+.funcionamento ul li{
+    list-style: none;
+}
+
 /* Seção de contato */
 #contato {
     text-align: center;
