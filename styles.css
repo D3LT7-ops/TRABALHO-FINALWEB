@@ -282,3 +282,29 @@ html, body {
     height: 100%;
     overflow-x: hidden;
 }
+
+
+
+
+/*teste */
+.violao {
+  background: url('madeira-textura.jpg') center/cover;
+  color: #5D4037;
+  padding: 60px 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.violao h2 {
+  font-family: 'Yatra One', cursive;
+  color: #FF7043;
+}
+
+.btn-violao {
+  background-color: #FF7043;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
