@@ -17,12 +17,32 @@ header {
     z-index: 1000;
 }
 
+/* Estilo da logo - posicionada no canto superior direito */
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    max-width: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     position: left;
     display: flex;
     justify-content: center;
+    margin-right: 100px; /* Deixa espaço para a logo */
 }
 
 nav ul li {
@@ -283,4 +303,54 @@ html, body {
     overflow-x: hidden;
 }
 
-/* faltando adicionar o css corespondente a logo */.
+/* Media queries para responsividade da logo */
+@media (max-width: 768px) {
+    .logo {
+        top: 8px;
+        right: 15px;
+    }
+    
+    .logo img {
+        width: 45px;
+        max-width: 60px;
+    }
+    
+    nav ul {
+        margin-right: 70px;
+        justify-content: flex-start;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        top: 5px;
+        right: 10px;
+    }
+    
+    .logo img {
+        width: 40px;
+        max-width: 50px;
+    }
+    
+    nav ul {
+        margin-right: 60px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul li {
+        margin: 2px 5px;
+    }
+    
+    header {
+        padding: 10px 15px;
+    }
+}
