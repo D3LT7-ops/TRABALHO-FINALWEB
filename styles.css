@@ -39,10 +39,11 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    position: left;
     display: flex;
     justify-content: center;
-    margin-right: 100px; /* Deixa espaço para a logo */
+    margin-right: 120px; /* Mais espaço para a logo */
+    position: relative;
+    z-index: 999; /* Garante que o menu fique abaixo da logo mas clicável */
 }
 
 nav ul li {
@@ -54,6 +55,10 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
+    display: block;
+    padding: 8px 12px;
+    position: relative;
+    z-index: 998;
 }
 
 nav ul li a:hover {
@@ -316,7 +321,7 @@ html, body {
     }
     
     nav ul {
-        margin-right: 70px;
+        margin-right: 90px;
         justify-content: flex-start;
     }
     
@@ -341,7 +346,7 @@ html, body {
     }
     
     nav ul {
-        margin-right: 60px;
+        margin-right: 80px;
         flex-direction: column;
         align-items: flex-start;
     }
