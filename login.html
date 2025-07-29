@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
-
-
 </head>
 <body>
     <header>
+        <!--  Logo adicionada -->
+        <div class="logo">
+            <img src="images/logo1.png" alt="Logo StrumSage">
+        </div>
+
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -19,7 +22,7 @@
         </nav>
     </header>
 
-     <main class="container">
+    <main class="container">
         <section id="cards" class="cards-container">
             <div class="card">
                 <a href="mainUser.html" class="card-link">
@@ -36,17 +39,18 @@
             </div>
         </section>
 
-    <section id="login">
-        <h2>Login</h2>
-        <form action="login.html" method="POST">
-            <input type="email" placeholder="Seu e-mail" required>
-            <input type="password" placeholder="Sua senha" required>
-            <button type="submit">Entrar</button>
-        </form>
-    </section>
+        <section id="login">
+            <h2>Login</h2>
+            <form action="login.html" method="POST">
+                <input type="email" placeholder="Seu e-mail" required>
+                <input type="password" placeholder="Sua senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Escola de Música</p>
+        <p>&copy; 2025 StrumSage</p>
     </footer>
 
     <script src="js/script.js"></script>
