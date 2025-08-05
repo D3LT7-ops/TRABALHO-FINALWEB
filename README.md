@@ -4,10 +4,10 @@
 ### entrar como aluno qualquer email : e qualquer senha   exemplo: renan@ifnmg.com
 
 
-# StrumSage - Escola de Música
+# Tom Music - Escola de Música
 
 ## Sobre o Projeto
-StrumSage é o site oficial de uma escola de música, projetado para apresentar seus serviços, metodologia e corpo docente. O site foca em atrair novos alunos, destacando os benefícios de aprender música em um ambiente profissional e acolhedor.
+Tom Music é o site oficial de uma escola de música, projetado para apresentar seus serviços, metodologia e corpo docente. O site foca em atrair novos alunos, destacando os benefícios de aprender música em um ambiente profissional e acolhedor.
 
 ## Funcionalidades Principais
 - **Navegação Responsiva:** Menu de navegação completo com links para as seções principais do site (Início, Sobre, Pacotes e Login), incluindo um ícone para menu mobile.
