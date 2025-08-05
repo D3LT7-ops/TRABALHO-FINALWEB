@@ -36,4 +36,4 @@ StrumSage é o site oficial de uma escola de música, projetado para apresentar 
 Este projeto é de uso livre e está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
 
 ## Créditos
-Desenvolvido por [Helberth Renan , Caio cesar].
+Desenvolvido por [Helberth Renan , Caio César].
