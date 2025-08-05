@@ -830,3 +830,19 @@ window.filtrarPacotes = filtrarPacotes;
 window.toggleFaq = toggleFaq;
 window.toggleSidebar = toggleSidebar;
 window.abrirChat = abrirChat;
+
+//Funcoes da API
+
+// Documentação da API: https://cloudinary.com/documentation/image_upload_api_reference
+
+const URL = "";
+
+async function chamarApi() {
+    const resp = await fetch(URL);
+    if (resp.status === 200){
+        const obj = await resp.json();
+        console.log(obj);
+    }
+}
+
+chamarApi();
