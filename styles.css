@@ -119,7 +119,7 @@ header .container {
 }
 
 .logo img {
-    height: 65px;
+    height: 80px;
     width: auto;
     transition: transform var(--transition-medium);
 }
