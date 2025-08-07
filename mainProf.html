@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Music - Área do Professor</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo11.png" alt="Logo Tom Music">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="mainProf.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#alunos"><i class="fas fa-users"></i> Alunos</a></li>
+                    <li><a href="#agenda"><i class="fas fa-calendar"></i> Agenda</a></li>
+                    <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+            </nav>
+            <div class="menu-mobile">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header do Professor -->
+    <section class="prof-header">
+        <div class="container">
+            <div class="prof-welcome">
+                <h1>Bem-vindo, Professor Anthony!</h1>
+                <p>Gerencie suas aulas e acompanhe o progresso dos seus alunos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Statistics -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalAlunos">28</span>
+                    <div class="stat-label">Alunos Ativos</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="aulasHoje">6</span>
+                    <div class="stat-label">Aulas Hoje</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="aulasSemana">32</span>
+                    <div class="stat-label">Aulas esta Semana</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="novasMatriculas">3</span>
+                    <div class="stat-label">Novas Matrículas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Principal -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Gerenciar Alunos -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-users"></i> Gerenciar Alunos</h3>
+                    <p>Visualize e gerencie informações dos seus alunos, acompanhe progresso e histórico de aulas.</p>
+                    <div class="quick-actions">
+                        <button class="action-btn" onclick="openModal('addAlunoModal')">
+                            <i class="fas fa-user-plus"></i> Novo Aluno
+                        </button>
+                        <a href="#alunos" class="action-btn">
+                            <i class="fas fa-list"></i> Ver Todos
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Agenda de Aulas -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-calendar-check"></i> Agenda de Aulas</h3>
+                    <p>Organize sua agenda, marque aulas e acompanhe horários disponíveis.</p>
+                    <div class="quick-actions">
+                        <button class="action-btn" onclick="openModal('addAulaModal')">
+                            <i class="fas fa-plus"></i> Nova Aula
+                        </button>
+                        <a href="#agenda" class="action-btn">
+                            <i class="fas fa-calendar"></i> Ver Agenda
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Material de Apoio -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-book"></i> Material de Apoio</h3>
+                    <p>Acesse e compartilhe materiais didáticos, partituras e exercícios com seus alunos.</p>
+                    <div class="quick-actions">
+                        <button class="action-btn" onclick="openModal('addMaterialModal')">
+                            <i class="fas fa-upload"></i> Upload Material
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-folder"></i> Ver Arquivos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Relatórios -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-chart-line"></i> Relatórios</h3>
+                    <p>Visualize relatórios de frequência, progresso dos alunos e análise financeira.</p>
+                    <div class="quick-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-chart-bar"></i> Gerar Relatório
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-download"></i> Exportar Dados
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Alunos -->
+    <section id="alunos" class="beneficios">
+        <div class="container">
+            <h2 class="section-title">Meus Alunos</h2>
+            <div class="alunos-list">
+                <div class="aluno-item">
+                    <img src="images/aluno1.jpg" alt="Maria" class="aluno-avatar">
+                    <div class="aluno-info">
+                        <div class="aluno-nome">Maria Oliveira</div>
+                        <div class="aluno-instrumento">Violão - Intermediário</div>
+                    </div>
+                    <div class="aluno-actions">
+                        <button class="btn-small btn-view" onclick="viewAluno('Maria')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn-small btn-edit" onclick="editAluno('Maria')">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn-small btn-message" onclick="messageAluno('Maria')">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="aluno-item">
+                    <img src="images/aluno2.jpg" alt="João" class="aluno-avatar">
+                    <div class="aluno-info">
+                        <div class="aluno-nome">João Pedro</div>
+                        <div class="aluno-instrumento">Bateria - Básico</div>
+                    </div>
+                    <div class="aluno-actions">
+                        <button class="btn-small btn-view" onclick="viewAluno('João')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn-small btn-edit" onclick="editAluno('João')">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn-small btn-message" onclick="messageAluno('João')">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="aluno-item">
+                    <img src="images/aluno3.jpg" alt="Ana" class="aluno-avatar">
+                    <div class="aluno-info">
+                        <div class="aluno-nome">Ana Costa</div>
+                        <div class="aluno-instrumento">Piano - Avançado</div>
+                    </div>
+                    <div class="aluno-actions">
+                        <button class="btn-small btn-view" onclick="viewAluno('Ana')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn-small btn-edit" onclick="editAluno('Ana')">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn-small btn-message" onclick="messageAluno('Ana')">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="aluno-item">
+                    <img src="images/aluno1.jpg" alt="Carlos" class="aluno-avatar">
+                    <div class="aluno-info">
+                        <div class="aluno-nome">Carlos Silva</div>
+                        <div class="aluno-instrumento">Guitarra - Intermediário</div>
+                    </div>
+                    <div class="aluno-actions">
+                        <button class="btn-small btn-view" onclick="viewAluno('Carlos')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn-small btn-edit" onclick="editAluno('Carlos')">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn-small btn-message" onclick="messageAluno('Carlos')">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção da Agenda -->
+    <section id="agenda" class="agenda-section">
+        <div class="container">
+            <h2 class="section-title">Agenda de Hoje</h2>
+            <div class="agenda-list">
+                <div class="agenda-item">
+                    <div class="agenda-time">09:00 - 10:00</div>
+                    <div class="agenda-info">
+                        <strong>Maria Oliveira</strong> - Violão (Sala 1)
+                        <br>Repertório: "Tears in Heaven" - Eric Clapton
+                    </div>
+                </div>
+
+                <div class="agenda-item">
+                    <div class="agenda-time">10:30 - 11:30</div>
+                    <div class="agenda-info">
+                        <strong>João Pedro</strong> - Bateria (Sala 2)
+                        <br>Exercícios de coordenação e rudimentos
+                    </div>
+                </div>
+
+                <div class="agenda-item">
+                    <div class="agenda-time">14:00 - 15:00</div>
+                    <div class="agenda-info">
+                        <strong>Ana Costa</strong> - Piano (Sala 1)
+                        <br>Estudo: "Für Elise" - Beethoven
+                    </div>
+                </div>
+
+                <div class="agenda-item">
+                    <div class="agenda-time">16:00 - 17:00</div>
+                    <div class="agenda-info">
+                        <strong>Carlos Silva</strong> - Guitarra (Sala 1)
+                        <br>Técnica de solos e improvisação
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modais -->
+    <!-- Modal Novo Aluno -->
+    <div id="addAlunoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Cadastrar Novo Aluno</h3>
+                <span class="close" onclick="closeModal('addAlunoModal')">&times;</span>
+            </div>
+            <form id="novoAlunoForm">
+                <div class="form-group">
+                    <label>Nome Completo:</label>
+                    <input type="text" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefone:</label>
+                    <input type="tel" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label>Instrumento:</label>
+                    <select name="instrumento" required>
+                        <option value="">Selecione...</option>
+                        <option value="violao">Violão</option>
+                        <option value="guitarra">Guitarra</option>
+                        <option value="piano">Piano/Teclado</option>
+                        <option value="bateria">Bateria</option>
+                        <option value="baixo">Baixo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Nível:</label>
+                    <select name="nivel" required>
+                        <option value="">Selecione...</option>
+                        <option value="basico">Básico</option>
+                        <option value="intermediario">Intermediário</option>
+                        <option value="avancado">Avançado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Observações:</label>
+                    <textarea name="observacoes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Cadastrar Aluno</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Nova Aula -->
+    <div id="addAulaModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agendar Nova Aula</h3>
+                <span class="close" onclick="closeModal('addAulaModal')">&times;</span>
+            </div>
+            <form id="novaAulaForm">
+                <div class="form-group">
+                    <label>Aluno:</label>
+                    <select name="aluno" required>
+                        <option value="">Selecione o aluno...</option>
+                        <option value="maria">Maria Oliveira</option>
+                        <option value="joao">João Pedro</option>
+                        <option value="ana">Ana Costa</option>
+                        <option value="carlos">Carlos Silva</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Data:</label>
+                    <input type="date" name="data" required>
+                </div>
+                <div class="form-group">
+                    <label>Horário:</label>
+                    <input type="time" name="horario" required>
+                </div>
+                <div class="form-group">
+                    <label>Duração:</label>
+                    <select name="duracao" required>
+                        <option value="">Selecione...</option>
+                        <option value="30">30 minutos</option>
+                        <option value="60">1 hora</option>
+                        <option value="90">1h30min</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Conteúdo da Aula:</label>
+                    <textarea name="conteudo" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Agendar Aula</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Upload Material -->
+    <div id="addMaterialModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Upload de Material</h3>
+                <span class="close" onclick="closeModal('addMaterialModal')">&times;</span>
+            </div>
+            <form id="materialForm">
+                <div class="form-group">
+                    <label>Título do Material:</label>
+                    <input type="text" name="titulo" required>
+                </div>
+                <div class="form-group">
+                    <label>Categoria:</label>
+                    <select name="categoria" required>
+                        <option value="">Selecione...</option>
+                        <option value="partitura">Partitura</option>
+                        <option value="exercicio">Exercício</option>
+                        <option value="teoria">Teoria Musical</option>
+                        <option value="audio">Áudio de Referência</option>
+                        <option value="video">Vídeo Aula</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Instrumento:</label>
+                    <select name="instrumento" required>
+                        <option value="">Selecione...</option>
+                        <option value="todos">Todos os Instrumentos</option>
+                        <option value="violao">Violão</option>
+                        <option value="guitarra">Guitarra</option>
+                        <option value="piano">Piano/Teclado</option>
+                        <option value="bateria">Bateria</option>
+                        <option value="baixo">Baixo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Arquivo:</label>
+                    <input type="file" name="arquivo" accept=".pdf,.mp3,.mp4,.png,.jpg" required>
+                </div>
+                <div class="form-group">
+                    <label>Descrição:</label>
+                    <textarea name="descricao" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Fazer Upload</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo11.png" alt="Tom Music">
+                    </div>
+                    <p>Transformando vidas através da música desde 2022</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/anthony_guimaraes_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/38992262726" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Área do Professor</h3>
+                    <ul>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#alunos">Gerenciar Alunos</a></li>
+                        <li><a href="#agenda">Agenda de Aulas</a></li>
+                        <li><a href="#materiais">Materiais</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Instrumentos</h3>
+                    <ul>
+                        <li><a href="#">Violão</a></li>
+                        <li><a href="#">Teclado</a></li>
+                        <li><a href="#">Bateria</a></li>
+                        <li><a href="#">Guitarra</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua Rio Pardo - 105 A/ Centro</p>
+                    <p><i class="fas fa-phone"></i> (38) 992262726</p>
+                    <p><i class="fas fa-envelope"></i> guimaraestagima31@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Seg-Sex: 8h-20h | Sáb: 8h-14h</p>
+                </div>  
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tom Music. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Função para abrir modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        // Função para fechar modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Fechar modal clicando fora
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        // Funcionalidades dos alunos
+        function viewAluno(nome) {
+            alert(`Visualizando perfil de ${nome}`);
+        }
+
+        function editAluno(nome) {
+            alert(`Editando informações de ${nome}`);
+        }
+
+        function messageAluno(nome) {
+            alert(`Enviando mensagem para ${nome}`);
+        }
+
+        // Menu mobile
+        document.querySelector('.menu-mobile').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+
+        // Envio dos formulários
+        document.getElementById('novoAlunoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Aluno cadastrado com sucesso!');
+            closeModal('addAlunoModal');
+            this.reset();
+        });
+
+        document.getElementById('novaAulaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Aula agendada com sucesso!');
+            closeModal('addAulaModal');
+            this.reset();
+        });
+
+        document.getElementById('materialForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Material enviado com sucesso!');
+            closeModal('addMaterialModal');
+            this.reset();
+        });
+
+        // Animação dos números das estatísticas
+        function animateNumbers() {
+            const stats = [
+                { id: 'totalAlunos', target: 28 },
+                { id: 'aulasHoje', target: 6 },
+                { id: 'aulasSemana', target: 32 },
+                { id: 'novasMatriculas', target: 3 }
+            ];
+
+            stats.forEach(stat => {
+                let current = 0;
+                const increment = stat.target / 20;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= stat.target) {
+                        current = stat.target;
+                        clearInterval(timer);
+                    }
+                    document.getElementById(stat.id).textContent = Math.floor(current);
+                }, 50);
+            });
+        }        
+        
+        
+        
+        
