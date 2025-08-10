@@ -1,13 +1,19 @@
 # TRABALHO-FINALWEB
-
-### entrar como adm login: admin@strumsage.com senha:admin1234
-### entrar como aluno qualquer email : e qualquer senha   exemplo: renan@ifnmg.com
-
-
 # Tom Music - Escola de Música
 
 ## Sobre o Projeto
 Tom Music é o site oficial de uma escola de música, projetado para apresentar seus serviços, metodologia e corpo docente. O site foca em atrair novos alunos, destacando os benefícios de aprender música em um ambiente profissional e acolhedor.
+
+# **ABA DE LOGIN**
+## ***ADM***
+### EMAIL : admin@tommusic.com
+### SENHA : amin123
+## ***ALUNO***
+### EMAIL : joao@email.com
+### SENHA : 123456 
+## ***PROFESSOR***
+### EMAIL : professor@tommusic.com
+### SENHA : prof123 
 
 ## Funcionalidades Principais
 - **Navegação Responsiva:** Menu de navegação completo com links para as seções principais do site (Início, Sobre, Pacotes e Login), incluindo um ícone para menu mobile.
@@ -23,7 +29,7 @@ Tom Music é o site oficial de uma escola de música, projetado para apresentar 
 - **CSS3:** Para a estilização e responsividade do layout.
 - **JavaScript:** Para a interatividade e funcionalidades dinâmicas do site (presente via `script.js`).
 - **Font Awesome:** Para a inclusão de ícones modernos e relevantes em todo o site.
-
+- **API:** feed basico desenvolvido por JSONplaceholder 
 
 ## Estrutura de Arquivos
 - `index.html`: O arquivo principal HTML da página inicial.
