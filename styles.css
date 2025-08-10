@@ -1592,6 +1592,62 @@ footer {
     animation: pulse 2s infinite;
 }
 
+
+/*Estilos da Api*/
+/* Estilos para a seção de alunos */
+.students-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.student-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+}
+
+.student-avatar img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.student-info {
+    padding: 15px;
+}
+
+.student-info h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.student-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1200px) {
     .container {
@@ -1762,6 +1818,7 @@ footer {
         justify-content: center;
     }
 }
+
 
 /* ===== PRINT STYLES ===== */
 @media print {

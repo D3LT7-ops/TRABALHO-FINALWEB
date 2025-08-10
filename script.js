@@ -8,7 +8,7 @@ let activeTab = 'aluno';
 
 // ===== INICIALIZAÇÃO =====
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('StrumSage - Sistema Iniciado');
+    console.log('Tom Music - Sistema Iniciado');
     
     // Verificar autenticação
     checkAuthentication();
@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Carregar dados iniciais
     loadInitialData();
+
+    //Carrega estudantes ficticios somente na pagina feed
+     if (window.location.pathname.includes('feed.html')) {
+        loadStudents();
+    }
 });
 
 // ===== AUTENTICAÇÃO =====
@@ -833,16 +838,56 @@ window.abrirChat = abrirChat;
 
 //Funcoes da API
 
-// Documentação da API: https://cloudinary.com/documentation/image_upload_api_reference
+function loadStudents() {
+    // Elemento onde os alunos serão exibidos
+    const studentsContainer = document.createElement('div');
+    studentsContainer.className = 'students-container';
+    document.querySelector('h1').after(studentsContainer);
 
-const URL = "";
+    // Adiciona um loading enquanto os dados são carregados
+    studentsContainer.innerHTML = '<p class="loading">Carregando alunos...</p>';
 
-async function chamarApi() {
-    const resp = await fetch(URL);
-    if (resp.status === 200){
-        const obj = await resp.json();
-        console.log(obj);
-    }
+    // Busca os dados na API
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar dados');
+            }
+            return response.json();
+        })
+        .then(users => {
+            // Limpa o loading
+            studentsContainer.innerHTML = '';
+
+            // Limita para 6 alunos (opcional)
+            const students = users.slice(0, 6);
+
+            // Cria os cards para cada aluno
+            students.forEach(student => {
+                const studentCard = document.createElement('div');
+                studentCard.className = 'student-card';
+
+                // Cria um instrumento musical aleatório para cada aluno
+                const instruments = ['Violão', 'Piano', 'Bateria', 'Violino', 'Canto', 'Guitarra'];
+                const randomInstrument = instruments[Math.floor(Math.random() * instruments.length)];
+
+                studentCard.innerHTML = `
+                    <div class="student-avatar">
+                        <img src="https://i.pravatar.cc/150?u=${student.id}" alt="${student.name}">
+                    </div>
+                    <div class="student-info">
+                        <h3>${student.name}</h3>
+                        <p><strong>Instrumento:</strong> ${randomInstrument}</p>
+                        <p><strong>Cidade:</strong> ${student.address.city}</p>
+                        <p><strong>Email:</strong> ${student.email}</p>
+                    </div>
+                `;
+
+                studentsContainer.appendChild(studentCard);
+            });
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            studentsContainer.innerHTML = '<p class="error">Não foi possível carregar os alunos no momento.</p>';
+        });
 }
-
-chamarApi();
