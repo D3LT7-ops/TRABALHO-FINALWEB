@@ -22,6 +22,7 @@
                     <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
                     <li><a href="pacotes.html"><i class="fas fa-box"></i> Pacotes</a></li>
                     <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+                    <li><a href="feed.html"> Feed</a></li>
                 </ul>
             </nav>
             <div class="menu-mobile">
@@ -30,32 +31,9 @@
         </div>
     </header>
 
-    <h1>Compartilhe seus Instrumentos aqui: </h1>
+    <h1>Alguns alunos que já estudaram conosco:</h1>
 
-    <div class="upload">
-        <h2>Escolha uma imagem e faça upload.</h2>
-        <input type="file" id="fileInput" accept=".jpg, .jpeg, .png" style="display:none;" onchange="handleFileInput(event)"/>
-        <p id="file-name"></p>
-        <img src="" alt="Prévia de Imagem" id="image-preview"/>
 
-        <div class="button-selected">
-            <button id="select-button" onclick="document.getElementById('fileInput').click()">Selecionar Arquivo</button>
-        </div>
-
-        <button id="upload-button" onclick="uploadImage()">Upload</button>
-    </div>
-
-    <div class="widget">
-        <h2>Upload de Imagem com Widget</h2>
-        <p>Utilize o widget de upload da Cloudinary para escolher uma imagem. Ele possui vários recursos para selecionar e obter uma imagem, além de permitir cortá-la antes de realizar o upload.</p>
-        <button class="button" onclick="openUploadWidget()">Abrir Widget</button>
-    </div>
-
-    <div class="gallery">
-        <h2>Galeria de Imagens</h2>
-        <p>Imagens enviadas pela comunidade (Limite de exibição de 100 imagens)</p>
-        <div id="image-gallery"></div>
-    </div>
 
     <footer>
         <div class="container">
