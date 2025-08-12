@@ -173,6 +173,7 @@ nav a.active {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--light-color);
 }
 
 /* ===== HERO SECTIONS ===== */
@@ -1698,10 +1699,22 @@ footer {
         background-color: var(--dark-color);
         flex-direction: column;
         padding: var(--spacing-md);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
     
     nav ul.active {
         display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+    
+    nav ul li a {
+        width: 100%;
+        padding: var(--spacing-md) 0;
+        display: block;
     }
     
     .menu-mobile {

@@ -47,6 +47,10 @@ function initializeComponents() {
     // Menu Mobile
     const menuMobile = document.querySelector('.menu-mobile');
     if (menuMobile) {
+        // Adiciona o ícone de barras se não existir
+        if (!menuMobile.querySelector('i')) {
+            menuMobile.innerHTML = '<i class="fas fa-bars"></i>';
+        }
         menuMobile.addEventListener('click', toggleMobileMenu);
     }
     
@@ -69,8 +73,29 @@ function initializeComponents() {
     initializeNotifications();
 }
 
+//Função para fechar o menu ao clicar em um link
+function setupMobileMenuClose() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                const menu = document.querySelector('nav ul');
+                menu.classList.remove('active');
+                
+                const menuIcon = document.querySelector('.menu-mobile i');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    });
+}
+
 // ===== EVENT LISTENERS =====
 function setupEventListeners() {
+    // Menu Mobile
+    setupMobileMenuClose();
+
     // Formulários
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
@@ -111,12 +136,17 @@ function setupEventListeners() {
 
 // ===== MENU MOBILE =====
 function toggleMobileMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
+    const menu = document.querySelector('nav ul');
+    menu.classList.toggle('active');
     
     const menuIcon = document.querySelector('.menu-mobile i');
-    menuIcon.classList.toggle('fa-bars');
-    menuIcon.classList.toggle('fa-times');
+    if (menuIcon.classList.contains('fa-bars')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+    } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+    }
 }
 
 // ===== LOGIN E AUTENTICAÇÃO =====
