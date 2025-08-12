@@ -7,7 +7,7 @@ Tom Music é o site oficial de uma escola de música, projetado para apresentar 
 # **ABA DE LOGIN**
 ## ***ADM***
 ### EMAIL : admin@tommusic.com
-### SENHA : amin123
+### SENHA : admin123
 ## ***ALUNO***
 ### EMAIL : joao@email.com
 ### SENHA : 123456 
