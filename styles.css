@@ -1,17 +1,4 @@
 
-/* 
-
-
-
-faltando fazer a estilzacao da aba de professor
-
-
-
-
-*/
-
-
-
 * {
     padding: 0;
     box-sizing: border-box;
@@ -1872,6 +1859,13 @@ footer {
         font-size: 12pt;
         color: #000;
         background: #fff;
+    }
+
+    #rodape {
+    font-family: var(--light-color  #fff);
+    text-align: center;
+    background-color: var(--gray-dark #343a40);
+    padding: 10px;
     }
     
     .container {
