@@ -79,5 +79,5 @@ Tom Music é o site oficial de uma escola de música moderna, desenvolvido como 
 Este projeto é de uso livre e está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
 
 ## Créditos
-### ScrumMaster/ PrductOwner e Usuario  : Anthony Guimaraes
+### ScrumMaster/ ProductOwner e Usuario  : Anthony Guimaraes
 ### Desenvolvido por [Helberth Renan , Caio César].
