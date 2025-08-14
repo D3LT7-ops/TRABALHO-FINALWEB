@@ -2,9 +2,20 @@
 # Tom Music - Escola de Música
 
 ## Sobre o Projeto
-Tom Music é o site oficial de uma escola de música, projetado para apresentar seus serviços, metodologia e corpo docente. O site foca em atrair novos alunos, destacando os benefícios de aprender música em um ambiente profissional e acolhedor.
+Tom Music é o site oficial de uma escola de música moderna, desenvolvido como projeto final da disciplina de Desenvolvimento Web. O site foi projetado para apresentar os serviços, metodologia e corpo docente da escola, com foco em atrair novos alunos e destacar os benefícios de aprender música em um ambiente profissional e acolhedor.
 
-# **ABA DE LOGIN**
+## Objetivos do Projeto
+
+- Criar uma presença digital profissional para a escola de música
+- Facilitar o contato entre alunos e professor
+- Apresentar de forma atrativa os cursos e metodologias disponíveis
+- Implementar um sistema de login por perfil de usuário
+- Desenvolver uma interface responsiva e moderna que seja de facil acesso
+
+
+
+# **Acesso ao Sistema**
+## **O sistema possui três níveis de acesso diferenciados:**
 ## ***ADM***
 ### EMAIL : admin@tommusic.com
 ### SENHA : admin123
@@ -16,19 +27,45 @@ Tom Music é o site oficial de uma escola de música, projetado para apresentar 
 ### SENHA : prof123 
 
 ## Funcionalidades Principais
-- **Navegação Responsiva:** Menu de navegação completo com links para as seções principais do site (Início, Sobre, Pacotes e Login), incluindo um ícone para menu mobile.
-- **Seção Hero:** Uma área de destaque com um título chamativo ("Desperte Seu Talento Musical"), subtítulo e botões de chamada para ação para explorar aulas e pacotes.
-- **Benefícios da Escola:** Seção dedicada a apresentar os diferenciais da TomMusic, como professor qualificado, aulas personalizadas, diversidade de instrumentos e horários flexíveis.
-- **Apresentação de Professores e Aulas:** Uma galeria de vídeos que demonstra o trabalho dos professores em diferentes instrumentos (Violão, Teclado, Bateria), com descrições e links para mais informações sobre os pacotes.
-- **Chamada para Ação (CTA):** Uma seção que incentiva os visitantes a agendarem uma aula experimental gratuita para conhecer a metodologia da escola.
-- **Depoimentos de Alunos:** Área para exibir testemunhos de alunos satisfeitos, construindo credibilidade e confiança.
+- Navegação Responsiva: Menu de navegação completo com links para as seções principais (Início, Sobre, Pacotes e Login), incluindo menu mobile otimizado
+- Design Responsivo: Interface adaptável para desktop, tablet e dispositivos móveis
+- Experiência do Usuário: Interface intuitiva e moderna com foco na usabilidade
 
-## Tecnologias Utilizadas
-- **HTML5:** Para a estrutura e conteúdo da página web.
-- **CSS3:** Para a estilização e responsividade do layout.
-- **JavaScript:** Para a interatividade e funcionalidades dinâmicas do site (presente via `script.js`).
-- **Font Awesome:** Para a inclusão de ícones modernos e relevantes em todo o site.
-- **API:** feed basico desenvolvido por JSONplaceholder 
+# Página Inicial
+
+## Seção Hero: Área de destaque com título impactante ("Desperte Seu Talento Musical"), subtítulo informativo e botões de chamada para ação
+## Benefícios da Escola: Apresentação dos diferenciais da TomMusic:
+- Professor qualificado e experiente
+- Aulas personalizadas para cada aluno
+- Diversidade de instrumentos disponíveis
+- Horários flexíveis para melhor conveniência
+
+
+# Área de Cursos
+
+- Galeria de Vídeos: Demonstrações do trabalho dos professores em diferentes instrumentos:
+- Violão (clássico e popular)
+- Teclado 
+- Bateria 
+- Descrições Detalhadas
+
+# Seção Social
+
+- Depoimentos de Alunos: Área dedicada para testemunhos de alunos satisfeitos
+- Credibilidade: Construção de confiança através de experiências reais
+- Chamada para Ação: Incentivo para agendamento de aula experimental gratuita
+
+# Sistema de Login
+
+- Autenticação Diferenciada: Sistema com três perfis distintos de usuário
+- Interface Segura: Formulário de login responsivo e seguro
+- Redirecionamento Inteligente: Direcionamento automático baseado no perfil do usuário
+
+# Bibliotecas e APIs
+- Font Awesome: Biblioteca de ícones moderna e responsiva
+- JSONPlaceholder API: Feed básico para simulação de dados dinâmicos
+
+# Obs : Algumas funcionalidades sao apenas visuais pois vamos precisar colocar em pratica banco de dados e backend sem isso essas funcionalidaes no momento estao estaticas .
 
 ## Estrutura de Arquivos
 - `index.html`: O arquivo principal HTML da página inicial.
@@ -37,8 +74,10 @@ Tom Music é o site oficial de uma escola de música, projetado para apresentar 
 - `images/`: Pasta que contém todas as imagens utilizadas no site (logos, banners, fotos de alunos, thumbnails de vídeo).
 - `video/`: Pasta que armazena os arquivos de vídeo para a seção de aulas.
 
+
 ## Licença
 Este projeto é de uso livre e está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
 
 ## Créditos
-Desenvolvido por [Helberth Renan , Caio César].
+### ScrumMaster/ PrductOwner e Usuario  : Anthony Guimaraes
+### Desenvolvido por [Helberth Renan , Caio César].
