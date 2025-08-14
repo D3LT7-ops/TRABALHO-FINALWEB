@@ -1,5 +1,21 @@
 # TRABALHO-FINALWEB
 # Tom Music - Escola de Música
+### Sumario
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Objetivos do Projeto](#objetivos-do-projeto)
+- [Obs](#Obs)
+- [Acesso ao Sistema](#acesso-ao-sistema)
+- [Funcionalidades Principais](#funcionalidades-principais)
+- [Página Inicial](#página-inicial)
+- [Área de Cursos](#área-de-cursos)
+- [Seção Social](#seção-social)
+- [Sistema de Login](#sistema-de-login)
+- [Bibliotecas e API](#bibliotecas-e-api)
+- [Estrutura de Arquivos](#estrutura-de-arquivos)
+- [Colaboradores](#colaboradores)
+- [Créditos](#créditos)
+- [OBS](#OBS)
+- [Licença](#licença)
 
 # Sobre o Projeto
 Tom Music é o site oficial de uma escola de música moderna, desenvolvido como projeto final da disciplina de Desenvolvimento Web. O site foi projetado para apresentar os serviços, metodologia e corpo docente da escola, com foco em atrair novos alunos e destacar os benefícios de aprender música em um ambiente profissional e acolhedor.
@@ -15,7 +31,7 @@ Tom Music é o site oficial de uma escola de música moderna, desenvolvido como 
 # Obs : Algumas funcionalidades sao apenas visuais pois vamos precisar colocar em pratica banco de dados e backend sem isso essas funcionalidaes no momento estao estaticas .
 
 
-# **Acesso ao Sistema**
+# Acesso ao sistema
 ## **O sistema possui três níveis de acesso diferenciados:**
 ## ***ADM***
 ### EMAIL : admin@tommusic.com
@@ -62,7 +78,7 @@ Tom Music é o site oficial de uma escola de música moderna, desenvolvido como 
 - Interface Segura: Formulário de login responsivo e seguro
 - Redirecionamento Inteligente: Direcionamento automático baseado no perfil do usuário
 
-# Bibliotecas e APIs
+# Bibliotecas e API
 - Font Awesome: Biblioteca de ícones moderna e responsiva
 - JSONPlaceholder API: Feed básico para simulação de dados dinâmicos
 
@@ -78,9 +94,22 @@ Tom Music é o site oficial de uma escola de música moderna, desenvolvido como 
 - styles.css              # Estilos principais
 - script.js               # Lógica JavaScript principal
 
+# Colaboradores
+### Este projeto foi desenvolvido por:
+
+- ScrumMaster/ ProductOwner e Usuario  : Anthony Guimaraes
+- Desenvolvido por [Helberth Renan , Caio César].
+
+# Créditos
+### Para desenvolvimento da API 
+- https://arthurporto.notion.site/09-API-REST-f68bf87b73be448e99171e195f53dbd0
+- https://jsonplaceholder.typicode.com/guide/
+- https://jsonplaceholder.typicode.com/
+
+### OBS: E DE SUMA IMPORTANCIA QUE TAMBEM FIZEMOS SIM O USO DE INTELIGENCIA ARTIFICIAL PARA NOS AUXILIAR EM FUNCAO DE USO EM ALGUMAS TAGS DIVS, E EM PARTES DA IMPLEMENTACAO DO JS  QUE NAO SABIAMOS IMPLEMENTAR CORRETAMENTE .
+
 # Licença
 Este projeto é de uso livre e está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
 
-# Créditos
-- ScrumMaster/ ProductOwner e Usuario  : Anthony Guimaraes
-- Desenvolvido por [Helberth Renan , Caio César].
+
+
