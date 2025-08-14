@@ -1,10 +1,10 @@
 # TRABALHO-FINALWEB
 # Tom Music - Escola de Música
 
-## Sobre o Projeto
+# Sobre o Projeto
 Tom Music é o site oficial de uma escola de música moderna, desenvolvido como projeto final da disciplina de Desenvolvimento Web. O site foi projetado para apresentar os serviços, metodologia e corpo docente da escola, com foco em atrair novos alunos e destacar os benefícios de aprender música em um ambiente profissional e acolhedor.
 
-## Objetivos do Projeto
+# Objetivos do Projeto
 
 - Criar uma presença digital profissional para a escola de música
 - Facilitar o contato entre alunos e professor
@@ -12,6 +12,7 @@ Tom Music é o site oficial de uma escola de música moderna, desenvolvido como 
 - Implementar um sistema de login por perfil de usuário
 - Desenvolver uma interface responsiva e moderna que seja de facil acesso
 
+# Obs : Algumas funcionalidades sao apenas visuais pois vamos precisar colocar em pratica banco de dados e backend sem isso essas funcionalidaes no momento estao estaticas .
 
 
 # **Acesso ao Sistema**
@@ -65,19 +66,21 @@ Tom Music é o site oficial de uma escola de música moderna, desenvolvido como 
 - Font Awesome: Biblioteca de ícones moderna e responsiva
 - JSONPlaceholder API: Feed básico para simulação de dados dinâmicos
 
-# Obs : Algumas funcionalidades sao apenas visuais pois vamos precisar colocar em pratica banco de dados e backend sem isso essas funcionalidaes no momento estao estaticas .
+# Estrutura de Arquivos
+- index.html              # Página principal
+- sobre.html              # Página sobre a escola
+- pacotes.html            # Página de pacotes e cursos
+- feed.html               # Feed de notícias e atualizações
+- gerenciamento.html      # Área de gerenciamento
+- mainAdm.html            # Dashboard do administrador
+- mainProf.html           # Dashboard do professor
+- mainUser.html           # Dashboard do aluno
+- styles.css              # Estilos principais
+- script.js               # Lógica JavaScript principal
 
-## Estrutura de Arquivos
-- `index.html`: O arquivo principal HTML da página inicial.
-- `styles.css`: O arquivo CSS que define os estilos visuais do site.
-- `script.js`: O arquivo JavaScript para a lógica interativa (como o menu mobile, se implementado).
-- `images/`: Pasta que contém todas as imagens utilizadas no site (logos, banners, fotos de alunos, thumbnails de vídeo).
-- `video/`: Pasta que armazena os arquivos de vídeo para a seção de aulas.
-
-
-## Licença
+# Licença
 Este projeto é de uso livre e está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
 
-## Créditos
-### ScrumMaster/ ProductOwner e Usuario  : Anthony Guimaraes
-### Desenvolvido por [Helberth Renan , Caio César].
+# Créditos
+- ScrumMaster/ ProductOwner e Usuario  : Anthony Guimaraes
+- Desenvolvido por [Helberth Renan , Caio César].
